@@ -78,7 +78,8 @@ public class HashTest
 	   File file = new File("dataS.txt");
 	       Scanner sc = new Scanner(file);
 	       
-		   System.out.println("Read DATA from \"dataS.txt\" & put in HASH Table: ");
+		System.out.println("Read DATA from \"dataS.txt\" & put in HASH Table: ");
+		System.out.println("There are " + sc.nextInt() + " SSNs in this file. ");
 	       int getSSN;
 	       while(sc.hasNextInt())
 	       {
@@ -109,7 +110,7 @@ public class HashTest
 	       hb.hasKey(a);
 	       System.out.println("Key = " + a + " -> Hash Value = " + a % H);
         
-        //Search for KEY
+        	//Search for KEY
 	       if(hb.hasKey(a) == -1)
 	       {
 	    	   System.out.println("Search result : " + a + " was not found.");
@@ -130,7 +131,7 @@ public class HashTest
 	       removedVal = hb.remove(b);
 	       System.out.println("Key = " + b + " -> Hash Value = " + b % H);
         
-        //Search for KEY
+        	//Search for KEY
 	       if(removedVal == -1)
 	       {
 	    	   System.out.println("Remove result : " + b + " was not found.");
@@ -149,7 +150,7 @@ public class HashTest
 	       hb.put(c);
 	       System.out.println("Key = " + c + " -> Hash Value = " + c % H);
         
-        //Search for KEY
+        	//Search for KEY
 	       if(hb.hasKey(c) == -1)
 	       {
 	    	   System.out.println("Insert result : Hash Table is full. Could not add " + c + " to HashBag.");
